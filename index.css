@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,700;0,800;1,300&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.search {
+  max-width: 600px;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00b4cc;
+  border-right: none;
+  padding: 5px;
+  height: 44px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: #00b4cc;
+}
+
+.searchButton {
+  width: 40px;
+  height: 44px;
+  border: 1px solid #00b4cc;
+  background: #00b4cc;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.Icon a {
+  font-size: 20px;
+  display: inline-block;
+  margin: 20px;
+}
+.logo a img {
+  height: 150px;
+}
+.Navitem ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 1rem;
+}
+
+.fda_food_row {
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 100px auto 20px;
+  display: flex;
+}
+
+.fda_food_row > .col-9 {
+  max-width: 295px;
+  padding: 0 1rem;
+  margin-bottom: 30px;
+}
+.fda_food_row > .col-9 > a {
+  text-decoration: none;
+}
+.fda_food_row > div:not(:first-child) {
+  margin-left: -15px;
+}
+
+#fda_product_tile {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  /* text-align: center; */
+}
+
+#fda_product_tile span {
+  display: block;
+}
+
+.fda_food_row div.food_tile {
+  background-color: rgba(0, 0, 0, 0.05);
+  /* font-size: 11px; */
+  /* padding: 0 25px; */
+  border-radius: 25px;
+  /* text-align: center; */
+  overflow: hidden;
+  cursor: pointer;
+  height: 100%;
+  transition: 0.5s all ease;
+}
+.food_tile:hover {
+  transition: 0.5s all ease;
+  transform: scale(1.03);
+}
+
+.fda_food_row div.food_tile.active {
+  background-color: rgba(220, 230, 252, 1);
+}
+
+.fda_food_row div.food_tile img {
+  position: relative;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.15),
+    inset 0 4px 0 rgba(0, 0, 0, 0.05), inset 0 -4px 0 rgba(0, 0, 0, 0.05),
+    inset 0 10px 10px rgba(0, 0, 0, 0.09), 0 1px 0px rgba(0, 0, 0, 0.1),
+    0 8px 7px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cardDeatil {
+  padding: 1rem;
+}
+.cardDeatil h6 {
+  margin: 0.2rem 0;
+  font-size: 11px;
+  font-weight: 400;
+  color: #000;
+}
+div.food_tile.active img {
+  background-color: rgba(220, 230, 252, 0.85);
+}
+.cardDeatil .rating {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  color: #fff;
+}
+.cardDeatil .rating i {
+  font-size: 9px;
+  margin-left: 3px;
+}
+
+.food_name {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(38, 29, 86, 1);
+  margin-bottom: 0px;
+  display: block;
+}
+
+.food_detail {
+  font-size: 16px;
+  color: rgba(38, 29, 86, 0.4);
+  margin-bottom: 15px;
+  display: block;
+}
+
+#food_meta {
+  margin: 0;
+  padding: 0;
+}
+
+#food_meta li {
+  list-style: none;
+  float: left;
+  width: 50%;
+  margin-bottom: 25px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(38, 29, 86, 1);
+}
+
+#food_meta li span {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(38, 29, 86, 0.5);
+}
+
+.btn-default {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+  padding: 12px 40px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.8);
+}
+.filter-btn {
+  padding: 0.6rem 1rem;
+}
+.SimmerUi {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.simmercard {
+  position: relative;
+  -webkit-box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 6px;
+  height: 500px;
+  overflow: hidden;
+  width: 300px;
+  margin: 40px auto;
+}
+
+.shimmerBG {
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: linear;
+  background: #ddd;
+  background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);
+  background-size: 1200px 100%;
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: 1200px 0;
+  }
+}
+
+.media {
+  height: 200px;
+}
+
+.p-32 {
+  padding: 32px;
+}
+
+.title-line {
+  height: 24px;
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 20px;
+}
+
+.content-line {
+  height: 8px;
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.end {
+  width: 40%;
+}
+
+.resdetail {
+  /* width: 60%; */
+  margin: 3rem auto;
+}
+h2,
+h6 {
+  margin: 0.6rem 0px 0px;
+}
+.resname {
+  font-size: 1.43rem;
+  font-weight: 600;
+  color: #282c3f;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+.cusions {
+  font-size: 0.93rem;
+  color: #7e808c;
+  height: calc(0.93rem + 2px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.orderHeading {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.orderdeatilHeading {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid #eee;
+  text-align: center;
+  border-radius: 10px;
+}
+.orderdeatilHeading label + label {
+  display: block;
+  border-top: 1px solid #eee;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 11px;
+}
+.timimg {
+  padding-top: 1rem;
+}
+.timimg label {
+  margin-right: 2rem;
+}
+.timimg label i {
+  margin-right: 10px;
+}
+
+.offerSection {
+  display: flex;
+}
+.offerCommonSec {
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  margin-top: 1.5rem;
+}
+.offerbtn {
+  /* display: flex; */
+  border: 1px solid #e9e9eb;
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  padding: 8px;
+  height: 100%;
+  min-width: 200px;
+  align-items: center;
+  background-color: transparent;
+  font-size: 0.8rem;
+}
+.offerCommonSec + .offerCommonSec > .offerbtn {
+  margin-left: 0.8rem;
+}
+.resOfferTop {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.resofferBottom {
+  font-weight: 600;
+  color: #737373;
+}
+.resofferBottom label {
+  padding-left: 0.5rem;
+  border-left: 2px solid #eee;
+}
+
+.buttonblock.fixed {
+  position: sticky;
+  top: 0;
+}
+.userDetail {
+  padding: 1rem;
+  border: 1px solid #eee;
+}
+
+.onlinestatus {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  display: inline-block;
+}
+.App {
+  min-height: 100vh;
+}
+.App.dark {
+  background: #171515;
+  color: #fff !important;
+}
+.App.dark header {
+  background: #3d3d3d;
+}
+.App.dark .cardDeatil h6 {
+  color: #fff;
+}
+.App.dark .food_name {
+  color: #fff;
+}
+.App.dark #food_meta li {
+  color: #fff;
+}
+.App.dark #food_meta li span {
+  color: #fff;
+}
+.App.dark select {
+  background-color: #000;
+}
+
+.App.dark .fda_food_row div.food_tile {
+  background-color: rgb(67 66 66);
+}
+.App.dark .searchTerm {
+  background: #3d3d3d;
+  border-color: #737e7f;
+}
+.App.dark .searchButton {
+  background-color: #3d3d3d;
+  border-color: #737e7f;
+}
+
+.App.dark .login,
+.App.dark .signup {
+  background: #3d3d3d;
+}
+.App.dark .login input,
+.App.dark .signup input {
+  background: #2b2a2a;
+}
+.foodtype {
+  display: inline-block;
+  border: 1px solid #000;
+  height: 15px;
+  width: 15px;
+  position: relative;
+}
+.foodtype:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  background: #000;
+  left: 27%;
+  top: 24%;
+  border-radius: 10px;
+}
+.foodtype.veg {
+  border-color: forestgreen;
+}
+.foodtype.nonveg {
+  border-color: red;
+}
+.foodtype.veg:before {
+  background: forestgreen;
+}
+.foodtype.nonveg:before {
+  background: red;
+}
